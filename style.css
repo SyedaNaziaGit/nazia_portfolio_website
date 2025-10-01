@@ -1,0 +1,153 @@
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --text: #e6eef8;
+  --muted: #9fb0c8;
+  --accent: #6ee7b7;
+  --accent-2: #60a5fa;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --max-width: 1100px;
+  --shadow: 0 6px 20px rgba(2,6,23,0.6);
+  --glass-2: rgba(255,255,255,0.02);
+}
+
+/* Light theme overrides */
+:root.light{
+  --bg: #f6f9ff;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #475569;
+  --glass: rgba(0,0,0,0.03);
+  --shadow: 0 6px 18px rgba(10,20,40,0.06);
+}
+
+/* Reset & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, color-mix(in srgb, var(--bg) 90%, transparent) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  min-height:100vh;
+}
+
+/* container */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin-inline:auto;
+  padding-block:2rem;
+}
+
+/* header */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:60;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:700;
+  color:var(--text);
+  text-decoration:none;
+  font-size:1.1rem;
+}
+.nav{display:flex; gap:1rem; align-items:center}
+.nav a{ color:var(--muted); text-decoration:none; font-weight:600}
+.nav a:hover{ color:var(--text)}
+
+/* header actions */
+.header-actions{display:flex; gap:.5rem; align-items:center}
+.cta{padding:.5rem .8rem; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--text)}
+.hamburger{display:none; background:transparent; border:0; color:var(--muted); font-size:1.2rem}
+
+/* hero */
+.hero{padding-block:4rem 6rem}
+.hero-grid{display:grid; grid-template-columns:1fr 380px; gap:2rem; align-items:center}
+.hero-text h1{font-size:2.1rem; margin:0}
+.accent{color:var(--accent)}
+.tagline{color:var(--muted); margin-top:.5rem}
+.hero-cta{margin-top:1.2rem; display:flex; gap:.8rem}
+.btn{display:inline-block; padding:.6rem .9rem; border-radius:10px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#042027; font-weight:700; text-decoration:none; border:0}
+.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text)}
+.btn.small{padding:.4rem .6rem; font-size:.9rem}
+
+/* mock card */
+.hero-card .mock-screen{width:100%; height:220px; border-radius:16px; background:linear-gradient(180deg,var(--card), var(--glass)); box-shadow:var(--shadow); padding:16px; display:flex; flex-direction:column; gap:10px}
+.mock-screen .topbar{height:12px; background:linear-gradient(90deg,var(--accent-2),var(--accent)); border-radius:8px}
+.mock-screen .content{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px}
+.mock-screen .tile{height:40px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:10px}
+.tile.short{grid-column:span 2; height:40px}
+
+/* sections */
+.section-title{font-size:1.4rem; margin:0 0 0.6rem 0}
+.muted{color:var(--muted)}
+
+/* about */
+.about-grid{display:grid; grid-template-columns:280px 1fr; gap:1.4rem; align-items:start}
+.profile-card{background:var(--card); border-radius:var(--radius); padding:1.2rem; box-shadow:var(--shadow)}
+.avatar{height:120px; display:flex; align-items:center; justify-content:center}
+.avatar-svg{width:100%; height:100%}
+.bio p{margin-top:0}
+
+/* skills */
+.skills{margin-top:1rem}
+label{display:flex; justify-content:space-between; font-weight:600; margin-top:.6rem}
+.progress{height:10px; background:var(--glass-2); border-radius:999px; overflow:hidden}
+.progress span{display:block; height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-2))}
+
+/* projects */
+.projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1rem}
+.project-card{background:var(--card); border-radius:12px; overflow:hidden; display:flex; flex-direction:column; min-height:220px; box-shadow:var(--shadow)}
+.proj-media{height:110px; display:flex; align-items:flex-end; justify-content:flex-end; padding:10px}
+.proj-pill{background:rgba(0,0,0,0.25); padding:.2rem .5rem; border-radius:999px; font-weight:700}
+.proj-body{padding:12px; flex:1; display:flex; flex-direction:column}
+.proj-actions{margin-top:auto; display:flex; gap:.6rem; align-items:center}
+
+/* contact */
+.contact-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1rem}
+.form-group{display:flex; flex-direction:column}
+.form-group.full{grid-column:1 / -1}
+.form-actions{grid-column:1 / -1; display:flex; gap:1rem; align-items:center}
+input,textarea{padding:.6rem; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:var(--text); outline:none}
+input:focus,textarea:focus{box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+.form-error{color:#ffb4b4; min-height:18px; font-size:.9rem}
+.form-success{color:var(--accent); font-weight:700}
+
+/* footer */
+.site-footer{padding:2rem 0; border-top:1px solid rgba(255,255,255,0.02); margin-top:2rem}
+
+/* modal */
+proj-modal, .proj-modal{border:0; padding:1.4rem; border-radius:12px; background:var(--card); color:var(--text); max-width:520px}
+.modal-close{position:absolute; right:10px; top:10px; background:transparent; border:0; color:var(--muted)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr; gap:1.6rem}
+  .about-grid{grid-template-columns:1fr; gap:1rem}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .hamburger{display:inline-block}
+  #mobile-nav{display:flex; flex-direction:column; gap:.5rem; padding: .8rem}
+  .hero{padding-block:3rem}
+}
+
+/* small polish */
+.link{color:var(--accent-2); text-decoration:none; font-weight:600}
+.small{font-size:.9rem; padding:.4rem .6rem}
+
+/* accessibility focus */
+a:focus,button:focus,input:focus,textarea:focus{outline:3px solid color-mix(in srgb, var(--accent) 30%, transparent); outline-offset:3px}

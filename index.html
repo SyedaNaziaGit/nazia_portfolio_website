@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Syeda Nazia — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Syeda Nazia</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+        <div class="header-actions">
+        <button id="theme-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
+        <p><a class="btn" href="metadata/Syeda_Nazia_Resume_2025.pdf" download>Download Resume (PDF)</a></p>
+        <button class="hamburger" id="menu-btn" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+      </div>
+    </div>
+    <div id="mobile-nav" class="mobile-nav" hidden>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+  <main>
+    <!-- HOME SECTION STARTS HERE-->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I’m <span class="accent">Nazia</span></h1>
+          <p class="tagline">Software Developer • Python Django FastAPI • Building scalable systems</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <!-- Simple floating project mock -->
+          <div class="mock-screen">
+            <div class="topbar"></div>
+            <div class="content">
+              <div class="tile">Software Developer</div>
+              <div class="tile short">syedanazia.sn19@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- ABOUT SECTION STARTS HERE-->
+    <section id="about" class="section container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="profile-card" aria-label="Profile card">
+          <div class="avatar" role="img" aria-label="Profile photo — placeholder">
+            <!-- inline SVG avatar placeholder -->
+            <svg viewBox="50 10 100 100" class="avatar-svg" >
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0" stop-color="var(--accent)"/>
+                  <stop offset="1" stop-color="var(--accent-2)"/>
+                </linearGradient>
+              </defs>
+                <image href="images/nazia.jpg"  width="130" height="150"/>
+            </svg>
+          </div>
+          <h3>Syeda Nazia</h3>
+          <p class="muted">
+            Software Developer with 3+ years building web apps. I focus on API design, development and deploying robust services.</p>
+        </div>
+
+        <div class="bio">
+          <p>Hi! I’m a backend developer with a love for Python and Django. Over the past 3+ years, I’ve built everything focusing on clean, maintainable code and scalable architectures. I enjoy working on challenging problems, optimizing APIs, and experimenting with CI/CD pipelines.<br/>
+             Check out my <a href="https://github.com/SyedaNaziaGit/" target="_blank" rel="noopener" class="link">Github</a>
+            <br/>
+            Outside of code I like painting, books, planting and traveling. 
+            <br/><br/>Below are some skills and proficiency levels.</p>
+
+          <div class="skills">
+            <label>Python <span class="skill-percent">90%</span></label>
+            <div class="progress"><span style="width: 90%"></span></div>
+
+            <label>Django <span class="skill-percent">85%</span></label>
+            <div class="progress"><span style="width: 85%"></span></div>
+
+            <label>Fast API <span class="skill-percent">80%</span></label>
+            <div class="progress"><span style="width: 80%"></span></div>
+
+            <label>MY SQL <span class="skill-percent">80%</span></label>
+            <div class="progress"><span style="width: 80%"></span></div>
+
+            <label>Mongo DB <span class="skill-percent">80%</span></label>
+            <div class="progress"><span style="width: 80%"></span></div>
+
+            <label>HTML CSS JavaScript <span class="skill-percent">75%</span></label>
+            <div class="progress"><span style="width: 75%"></span></div>
+
+            <label>Devops Cloud tools/ CI-CD <span class="skill-percent">75%</span></label>
+            <div class="progress"><span style="width: 75%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">Projects</h2>
+      <p class="muted">Some projects are displayed Here ,Please Do click View to read a short summary.<br/>Thankyou</p>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="proj-media" role="img" aria-label="Project screenshot placeholder">
+            <div class="proj-pill">Django</div>
+            <img src="images/Django.png" alt="FAST API Project Screenshot" class="proj-media">
+          </div>
+          <div class="proj-body">
+            <h3>ShopOnTrends : E-commerce App</h3>
+            <p class="muted">Full-stack e-commerce app with product CRUD, cart, checkout and payment gateway integration </p>
+            <div class="proj-actions">
+              <button class="btn small view-project" data-title="ShopOnTrends" data-desc="Django e-commerce app with PostgreSQL, sessions-based cart, and REST API endpoints.">View</button>
+              <a href="https://github.com/SyedaNaziaGit/ShopOnTrends-django-ecommerce-app" target="_blank" rel="noopener" class="link">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="proj-media" role="img" aria-label="Project screenshot placeholder">
+            <div class="proj-pill">FAST API</div>
+            <img src="images/FastAPI.png" alt="FAST API Project Screenshot" class="proj-media">
+          </div>
+          <div class="proj-body">
+            <h3>FastAPI LOGGER</h3>
+            <p class="muted"> Structured Logging in FastAPI using Python’s logging module with log rotation for better observability</p>
+            <div class="proj-actions">
+              <button class="btn small view-project" data-title="RideShare API" data-desc="Logging using fastapi .">View</button>
+              <a class="link" href="https://github.com/SyedaNaziaGit/fastapi-logger" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+          <!-- Project 3 -->
+        <article class="project-card">
+          <div class="proj-media" role="img" aria-label="Project screenshot placeholder">
+            <div class="proj-pill">System Design</div>
+            <img src="images/systemDesign1.png" alt="FAST API Project Screenshot" class="proj-media">
+          </div>
+          <div class="proj-body">
+            <h3>LLD of RideShare API</h3>
+            <p class="muted">Low level system design  API for ride booking — authentication, booking, and driver matching logic.</p>
+            <div class="proj-actions">
+              <button class="btn small view-project" data-title="RideShare API" data-desc="Low level system design using microservices design patterns">View</button>
+              <a class="link" href="https://github.com/SyedaNaziaGit/Low-Level-System-Design-Case-Studies/tree/main/Ride_sharing_app_Uber" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <div class="proj-media" role="img" aria-label="Project screenshot placeholder">
+            <div class="proj-pill">CI/CD</div>
+            <img src="images/cicd.png" alt="cicd logo" class="proj-media">
+          </div>
+          <div class="proj-body">
+            <h3>CI/CD Pipeline</h3>
+            <p class="muted">A sample pipeline using GitHub Actions, Docker build, and deployment to a Kubernetes cluster.</p>
+            <div class="proj-actions">
+              <button class="btn small view-project" data-title="CI/CD Pipeline Demo" data-desc="To be Published: Github Actions workflow demonstrating tests, build, and docker push.">View</button>
+              <a class="link" href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+     <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Contact</h2>
+      <p class="muted">Interested in collaborating? Send a message below.</p>
+
+      <form id="contact-form" class="contact-grid" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" required minlength="2" placeholder="Your Name" />
+          <small class="form-error" id="name-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="youremail@example.com" />
+          <small class="form-error" id="email-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Tell me about your project..."></textarea>
+          <small class="form-error" id="message-error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-actions full">
+          <button type="submit" class="btn">Send Message</button>
+          <div id="form-success" class="form-success" role="status" aria-live="polite" hidden>Thanks! Your message was sent.</div>
+        </div>
+      </form>
+    </section>
+
+</main>
+    <!-- Project modal -->
+  <dialog id="proj-modal" class="proj-modal" aria-modal="true">
+    <button class="modal-close" id="modal-close" aria-label="Close project details">✕</button>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+    <a id="modal-code" class="link" href="#" target="_blank" rel="noopener">View code</a>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Syeda Nazia </p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
